@@ -1,0 +1,553 @@
+/* General */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f8f8f8; /* Color de fondo suave y neutro */
+    color: #333; /* Texto en gris oscuro para mayor legibilidad */
+}
+
+/* Navegación */
+nav {
+    background-color: #5f476b; /* Igual al color del fondo del carrusel */
+    padding: 12px 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center;
+}
+
+/* Nombre de la empresa alineado a la izquierda */
+.navbar-brand {
+    font-family: 'Josefin Sans', sans-serif;
+    color: #f5a623; /* Un toque dorado sutil para el logo */
+    font-size: 1.8em;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-right: auto; /* Separa del centro vacío */
+}
+
+/* Opciones de navegación alineadas a la derecha */
+.navbar-nav {
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    display: flex;
+    gap: 15px; /* Espaciado entre las opciones */
+    margin-left: auto; /* Empuja las opciones hacia la derecha */
+}
+
+/* Estilos de los enlaces de navegación */
+.navbar-nav .nav-item .nav-link {
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    background-color: #4e4b46; /* Oscurecimiento al pasar el cursor */
+    transform: scale(1.05);
+}
+
+/* Iconos (opcional, si los hay) */
+.navbar .nav-icon {
+    color: #fff;
+    font-size: 1.2em;
+    margin-left: 15px;
+    transition: transform 0.3s ease;
+}
+
+.navbar .nav-icon:hover {
+    transform: scale(1.2);
+}
+
+
+/* Barra de navegación en móviles */
+@media (max-width: 991px) {
+    .navbar-toggler-icon {
+        background-color: #fff;
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar-nav .nav-item .nav-link {
+        font-size: 1.1em;
+    }
+}
+
+/* Estilo para las flechas del carrusel */
+.carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5em; /* Tamaño reducido */
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro con opacidad */
+    border-radius: 50%;
+    width: 40px; /* Tamaño fijo */
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    border: 1px solid #f5a623; /* Borde dorado */
+}
+/*posible eliminar*/
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: #f5a623; /* Color dorado en hover */
+    transform: translateY(-50%) scale(1.2); /* Pequeño aumento en el tamaño */
+}
+
+/* Imagen de fondo fija */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-image: url(''); /* Reemplaza con la URL de tu imagen */
+    background-size: cover; /*Imagen fija */
+    background-position: center;
+    background-attachment: fixed; /* Mantener imagen estática */
+}
+
+/* Texto superpuesto */
+.hero .content {
+    position: absolute;
+    z-index: 1;
+    color: #ecf0f1;
+    text-align: center;
+    font-size: 2rem; /* Ajusta el tamaño del texto */
+    font-family: 'Muli', sans-serif;
+    font-weight: 600;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para el texto */
+    border-radius: 8px;
+}
+
+/* Estilo del contenedor del carrusel */
+#template-mo-zay-hero-carousel {
+    width: 100%; /* Mantener el ancho completo */
+    height: 500px; /* Altura fija */
+    overflow: hidden; /* Ocultar contenido que exceda el contenedor */
+}
+
+/* Asegurarse de que las imágenes se ajusten al tamaño del carrusel */
+#template-mo-zay-hero-carousel .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantener la proporción de la imagen */
+}
+
+/* Asegura que el carrusel ocupe el ancho y tenga una altura fija */
+#template-mo-zay-hero-carousel {
+    width: 100%;
+    height: 500px; /* Altura fija */
+    overflow: hidden;
+}
+
+/* Estilo general para los elementos del carrusel */
+.carousel-item {
+    width: 100%;
+    height: 500px; /* Mantener la altura fija */
+    background-size: cover; /* Imagen cubre todo el espacio */
+    background-position: center; /* Centrar la imagen */
+    background-repeat: no-repeat; /* Sin repetir */
+}
+
+/* Imagen de fondo para cada slide */
+.carousel-item.item1 {
+    background-image: url('Image/fondo1.jpg'); /* Reemplaza con la URL de tu imagen */
+}
+
+.carousel-item.item2 {
+    background-image: url('Image/fondo2.png');
+}
+
+.carousel-item.item3 {
+    background-image: url('Image/fondo3.jpg');
+}
+
+/* Opcional: Ajuste para dispositivos pequeños */
+@media (max-width: 768px) {
+    #template-mo-zay-hero-carousel {
+        height: 300px; /* Altura más pequeña en dispositivos pequeños */
+    }
+
+    .carousel-item {
+        height: 300px;
+    }
+}
+
+
+
+/* Ajuste para dispositivos pequeños */
+@media (max-width: 768px) {
+    .carousel-control-prev, .carousel-control-next {
+        width: 30px;
+        height: 30px;
+        font-size: 1.2em;
+    }
+
+    .hero .content {
+        font-size: 1.5rem;
+        padding: 8px 15px;
+    }
+}
+
+/* Productos ------------------------------------------------------------------------------------------------------------>*/
+.productos {
+    padding: 80px 0;
+    text-align: center;
+    background: linear-gradient(to bottom, #f5f5f5, #eaeaea); /* Fondo degradado elegante */
+}
+
+.productos h2 {
+    font-size: 2.8em;
+    color: #333; /* Gris neutro profesional */
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif; /* Fuente moderna */
+    letter-spacing: 1px;
+}
+
+.carrusel {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 30px 10px;
+    background: #ffffff; /* Fondo blanco para contraste */
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    flex: 0 0 auto;
+    margin: 10px;
+    padding: 25px;
+    background: linear-gradient(145deg, #ffffff, #f7f7f7); /* Fondo degradado claro */
+    border-radius: 20px;
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+.card h3 {
+    font-size: 1.6em;
+    font-weight: 700;
+    color: #333; /* Gris oscuro */
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1em;
+    color: #666; /* Gris medio */
+    line-height: 1.6;
+}
+
+.card .price {
+    font-size: 1.4em;
+    font-weight: 600;
+    color: #ff7043; /* Naranja cálido para resaltar */
+    margin-top: 10px;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background: #ff7043; /* Naranja vibrante */
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.card a:hover {
+    background: #ff5722; /* Naranja más intenso */
+    transform: scale(1.1);
+}
+
+/* Scroll personalizado del carrusel */
+.carrusel::-webkit-scrollbar {
+    height: 8px;
+}
+
+.carrusel::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
+
+.carrusel::-webkit-scrollbar-thumb:hover {
+    background: #bbb;
+}
+/* FIN Productos ------------------------------------------------------------------------------------------------------------>*/
+
+/* Beneficios ------------------------------------------------------------------------------------------------------->*/
+.beneficios {
+    background: linear-gradient(to bottom, #f9f9f9, #ececec); /* Fondo degradado suave */
+    padding: 80px 0;
+    font-family: 'Poppins', sans-serif; /* Fuente más moderna */
+}
+
+.beneficio-item {
+    padding: 40px;
+    background: linear-gradient(to bottom, #ffffff, #f6f6f6); /* Fondo degradado en las cartas */
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.beneficio-item:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15); /* Efecto de sombra al elevarse */
+}
+
+.beneficio-item:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 15px;
+}
+
+.beneficio-item:hover:before {
+    opacity: 1;
+}
+
+.beneficio-item i {
+    color: #ffb74d; /* Color cálido para los íconos */
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.beneficio-item:hover i {
+    color: #ffa726; /* Color más intenso al pasar el cursor */
+}
+
+.beneficio-item h3 {
+    font-size: 1.8em;
+    color: #333; /* Gris neutro más elegante */
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.beneficio-item p {
+    font-size: 1.1em;
+    color: #666; /* Gris mediano */
+    margin-top: 15px;
+    line-height: 1.6em;
+}
+
+.beneficio-item a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background: #ffb74d; /* Botón en color cálido */
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.beneficio-item a:hover {
+    background: #ffa726;
+    transform: scale(1.05);
+}
+/*FIN Beneficios ------------------------------------------------------------------------------------------------------->*/
+
+/* Testimonios */
+.testimonios {
+    background-color: #f5f5f5; /* Fondo gris muy claro */
+    padding: 60px 0;
+}
+
+.carousel-item {
+    background-color: #6b4f47; /* Color marrón para el fondo de los testimonios */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.carousel-item p {
+    font-size: 1.2em;
+    font-style: italic;
+    color: #fff; /* Cambiado a blanco para mayor contraste con el fondo marrón */
+    margin-bottom: 10px;
+}
+
+.carousel-item footer {
+    font-size: 1em;
+    color: #fff; /* Cambiado a blanco para mantener la coherencia con el texto */
+    background-color: transparent;
+}
+
+
+/* Estilo para el footer */
+footer {
+    background: #4e4b46; /* Gris oscuro elegante */
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 1em;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #f5a623;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+/* Asegura que el carrusel ocupe todo el ancho de la pantalla */
+#template-mo-zay-hero-carousel {
+    width: 100vw; /* Ocupa el 100% del ancho de la ventana */
+    height: 100vh; /* Ocupa el 100% de la altura de la ventana */
+}
+/* imagenes sobre puedas*/
+/* Asegura que el carrusel se vea correctamente en su contenedor */
+.carousel-inner {
+    width: 100%;
+    height: 100%;
+}
+
+/* Asegura que las imágenes dentro del carrusel ocupen todo el espacio */
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra completamente el espacio disponible */
+}
+
+/* Estilo para los controles del carrusel */
+.carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2em;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.6); /* Fondo oscuro con menos opacidad */
+    border-radius: 50%;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+    z-index: 5; /* Asegura que las flechas estén sobre las imágenes */
+}
+
+/* Efecto hover para los controles */
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #f5a623; /* Color dorado para las flechas */
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Estilo del fondo y la sección */
+.eco-bag {
+    background-color: #f0f8f0; /* Fondo muy suave y natural */
+    padding: 60px 0;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Estilo para los títulos */
+.eco-bag h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    font-size: 3em;
+    color: #388e3c; /* Verde */
+}
+
+.eco-bag h3 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 500;
+    font-size: 1.5em;
+    color: #5c6b3c; /* Gris oscuro para subtítulos */
+}
+
+/* Descripción del producto */
+.eco-bag .lead {
+    font-size: 1.2em;
+    color: #333;
+    font-style: italic;
+}
+
+/* Estilo del botón */
+.eco-bag .btn-success {
+    background-color: #388e3c; /* Verde más oscuro */
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.eco-bag .btn-success:hover {
+    background-color: #2c6e2f;
+}
+
+/* Imágenes */
+.eco-bag img {
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+}
+
+/* Diseño de elementos naturales */
+.eco-bag::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: url('path_to_your_leaf_image.png') no-repeat center center;
+    background-size: cover;
+    opacity: 0.1;
+}
+
+

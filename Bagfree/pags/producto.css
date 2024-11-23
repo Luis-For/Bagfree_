@@ -1,0 +1,380 @@
+/* General */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* Navegación */
+nav {
+    background-color: #5f476b;
+    padding: 12px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    color: #f5a623;
+    font-size: 1.8em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.navbar-nav {
+    font-weight: 600;
+    display: flex;
+    gap: 15px;
+    margin-left: auto;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    background-color: #4e4b46;
+    transform: scale(1.05);
+}
+
+/* Barra de navegación en móviles */
+@media (max-width: 991px) {
+    .navbar-nav {
+        text-align: center;
+    }
+    .navbar-nav .nav-item .nav-link {
+        font-size: 1.1em;
+    }
+}
+
+/* Estilo para la imagen de fondo de la sección hero */
+/* Estilo para las flechas del carrusel */
+.carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5em; /* Tamaño reducido */
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro con opacidad */
+    border-radius: 50%;
+    width: 40px; /* Tamaño fijo */
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    border: 1px solid #f5a623; /* Borde dorado */
+}
+
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: #f5a623; /* Color dorado en hover */
+    transform: translateY(-50%) scale(1.2); /* Pequeño aumento en el tamaño */
+}
+
+/* Texto superpuesto */
+.hero .content {
+    position: absolute;
+    z-index: 1;
+    color: #ecf0f1;
+    text-align: center;
+    font-size: 2rem; /* Ajusta el tamaño del texto */
+    font-family: 'Muli', sans-serif;
+    font-weight: 600;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para el texto */
+    border-radius: 8px;
+}
+
+/* Estilo del contenedor del carrusel */
+#template-mo-zay-hero-carousel {
+    width: 100%; /* Mantener el ancho completo */
+    height: 500px; /* Altura fija */
+    overflow: hidden; /* Ocultar contenido que exceda el contenedor */
+}
+
+/* Asegurarse de que las imágenes se ajusten al tamaño del carrusel */
+#template-mo-zay-hero-carousel .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantener la proporción de la imagen */
+}
+
+/* Asegura que el carrusel ocupe el ancho y tenga una altura fija */
+#template-mo-zay-hero-carousel {
+    width: 100%;
+    height: 500px; /* Altura fija */
+    overflow: hidden;
+}
+
+/* Estilo general para los elementos del carrusel */
+.carousel-item {
+    width: 100%;
+    height: 500px; /* Mantener la altura fija */
+    background-size: cover; /* Imagen cubre todo el espacio */
+    background-position: center; /* Centrar la imagen */
+    background-repeat: no-repeat; /* Sin repetir */
+}
+
+/* Imagen de fondo para cada slide */
+.carousel-item.item1 {
+    background-image: url('../Image/fondo1.jpg'); /* Reemplaza con la URL de tu imagen */
+}
+
+.carousel-item.item2 {
+    background-image: url('../Image/fondo2.png');
+}
+
+.carousel-item.item3 {
+    background-image: url('../Image/fondo3.jpg');
+}
+
+/* Opcional: Ajuste para dispositivos pequeños */
+@media (max-width: 768px) {
+    #template-mo-zay-hero-carousel {
+        height: 300px; /* Altura más pequeña en dispositivos pequeños */
+    }
+
+    .carousel-item {
+        height: 300px;
+    }
+}
+
+/* Ajuste para dispositivos pequeños */
+@media (max-width: 768px) {
+    .carousel-control-prev, .carousel-control-next {
+        width: 30px;
+        height: 30px;
+        font-size: 1.2em;
+    }
+
+    .hero .content {
+        font-size: 1.5rem;
+        padding: 8px 15px;
+    }
+}
+
+
+/* Productos ------------------------------------------------------------------------------------------------------------>*/
+.productos {
+    padding: 80px 0;
+    text-align: center;
+    background: linear-gradient(to bottom, #f5f5f5, #eaeaea); /* Fondo suave para darle un toque moderno */
+}
+
+.productos h2 {
+    font-size: 3em;
+    color: #2c3e50; /* Gris oscuro elegante */
+    margin-bottom: 40px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase; /* Da un toque profesional */
+}
+
+.carrusel {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 30px 15px;
+    background: #fff; /* Fondo blanco limpio para los productos */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    flex: 0 0 auto;
+    margin: 15px;
+    padding: 25px;
+    background: linear-gradient(145deg, #ffffff, #f7f7f7); /* Fondo degradado más sofisticado */
+    border-radius: 20px;
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #ecf0f1; /* Borde suave para simular la carta */
+}
+
+.card:hover {
+    transform: translateY(-12px) scale(1.05); /* El producto sobresale un poco al hacer hover */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    border: 2px solid #3498db; /* Cambio de borde al hacer hover, resaltando en azul */
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+.card h3 {
+    font-size: 1.6em;
+    font-weight: 700;
+    color: #2c3e50; /* Gris oscuro para resaltar el título */
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1em;
+    color: #7f8c8d; /* Gris medio para una apariencia más moderna */
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.card .price {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #e74c3c; /* Rojo vibrante para el precio */
+    margin-top: 10px;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    color: #fff;
+    background: #3498db; /* Azul vibrante para el botón */
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.card a:hover {
+    background: #2980b9; /* Azul más oscuro al hacer hover */
+    transform: scale(1.1);
+}
+
+/* Scroll personalizado del carrusel */
+.carrusel::-webkit-scrollbar {
+    height: 8px;
+}
+
+.carrusel::-webkit-scrollbar-thumb {
+    background: #3498db; /* Color del thumb en azul */
+    border-radius: 10px;
+}
+
+.carrusel::-webkit-scrollbar-thumb:hover {
+    background: #2980b9; /* Azul más oscuro cuando se pasa el cursor */
+}
+
+/* Estilo general de la sección de productos */
+#productos {
+    background-color: #f8f8f8;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/* Estilo para las tarjetas de productos */
+.producto-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Ajuste del tamaño de las imágenes */
+.producto-card .card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Estilo para la información del producto */
+.producto-card .card-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.producto-card .card-info h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.producto-card .card-info p {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+}
+
+/* Animación al poner el mouse sobre el producto */
+.producto-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Grid de productos */
+#productos .row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 5 productos por fila */
+    gap: 20px;
+}
+
+@media (max-width: 1199px) {
+    /* Para pantallas grandes (de escritorio) */
+    #productos .row {
+        grid-template-columns: repeat(4, 1fr); /* 4 productos por fila */
+    }
+}
+
+@media (max-width: 991px) {
+    /* Para pantallas medianas (tabletas) */
+    #productos .row {
+        grid-template-columns: repeat(3, 1fr); /* 3 productos por fila */
+    }
+}
+
+@media (max-width: 767px) {
+    /* Para pantallas pequeñas (móviles) */
+    #productos .row {
+        grid-template-columns: repeat(2, 1fr); /* 2 productos por fila */
+    }
+}
+
+@media (max-width: 576px) {
+    /* Para pantallas muy pequeñas */
+    #productos .row {
+        grid-template-columns: 1fr; /* 1 producto por fila */
+    }
+}
+
+/* Estilo para el footer */
+footer {
+    background: #4e4b46;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 1em;
+}
+
+footer a {
+    color: #f5a623;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

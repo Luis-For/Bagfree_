@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Josefin+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Empresa</title>
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light shadow" style="background-color: #a1887f; padding: 10px 20px;">
+        <div class="container d-flex justify-content-between align-items-center">
+            
+            <!-- Logo alineado a la izquierda -->
+            <a class="navbar-brand d-flex align-items-center" href="index.html" style="color: #ffb74d; font-family: 'Josefin Sans', sans-serif;">
+                <img class="img-fluid" src="Image/logoFinal.png" alt="Logo" style="width: 40px; height: 40px; margin-right: 20px;">
+                BAGFREE
+            </a>
+
+            <!-- Toggler para navegación móvil -->
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navegación -->
+            <div class="collapse navbar-collapse flex-fill d-lg-flex justify-content-end" id="navbarNav">
+                <ul class="nav navbar-nav d-flex align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" style="color: #fff; font-weight: 600; text-transform: uppercase;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pags/producto.html" style="color: #fff; font-weight: 600; text-transform: uppercase;">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pags/sobreNosotros.html" style="color: #fff; font-weight: 600; text-transform: uppercase;">Sobre nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pags/contacto.html" style="color: #fff; font-weight: 600; text-transform: uppercase;">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+        <!-- CARRUSEL DE IMÁGENES -->
+    <section id="inicio" class="hero">
+        <div id="template-mo-zay-hero-carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Primer item -->
+                <div class="carousel-item item1 active">
+                    <div class="container">
+                        <div class="row p-5">
+                            <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
+                                <img class="img-fluid" src="Image/Bolsa.png" alt="Bolsa ecológica BagFree">
+                            </div>
+                            <div class="col-lg-6 mb-0 d-flex align-items-center">
+                                <div class="text-align-left align-self-center">
+                                    <h1 class="h1 text-success"><b>BagFree</b></h1>
+                                    <h3 class="h2">Revoluciona tus hábitos de consumo</h3>
+                                    <p>
+                                        Reduce tu huella ecológica con nuestras bolsas reutilizables. Únete al movimiento que está cambiando el mundo, una bolsa a la vez.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Segundo item -->
+                <div class="carousel-item item2">
+                    <div class="container">
+                        <div class="row p-5">
+                            <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
+                                <img class="img-fluid" src="Image/bolsa2.png" alt="Bolsa de diseño innovador">
+                            </div>
+                            <div class="col-lg-6 mb-0 d-flex align-items-center">
+                                <div class="text-align-left">
+                                    <h1 class="h1">Calidad y Sostenibilidad</h1>
+                                    <h3 class="h2">Bolsa reutilizable para cada ocasión</h3>
+                                    <p>
+                                        Con materiales reciclables y diseños únicos, nuestras bolsas son ideales para todas tus actividades diarias. Estilo y responsabilidad en una sola elección.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tercer item -->
+                <div class="carousel-item item3">
+                    <div class="container">
+                        <div class="row p-5">
+                            <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
+                                <img class="img-fluid" src="Image/producto4.png" alt="Colección BagFree">
+                            </div>
+                            <div class="col-lg-6 mb-0 d-flex align-items-center">
+                                <div class="text-align-left">
+                                    <h1 class="h1">Elige BagFree</h1>
+                                    <h3 class="h2">Menos plástico, más futuro</h3>
+                                    <p>
+                                        Cada bolsa que eliges es un paso hacia un planeta más limpio. Súmate al cambio y sé parte de nuestra comunidad eco-friendly.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controles del carousel -->
+            <a class="carousel-control-prev" href="#template-mo-zay-hero-carousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#template-mo-zay-hero-carousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Sección de productos -->
+    <section id="productos" class="productos">
+        <h2 class="text-center text-success">Productos Destacados</h2>
+        <div class="carrusel">
+            <div class="card">
+                <img src="Image/producto1.png" alt="Bolsa EcoBag Verde">
+                <h3>EcoBag Verde</h3>
+                <p>$15.00</p>
+            </div>
+            <div class="card">
+                <img src="Image/producto2.png" alt="Bolsa EcoBag Urbana">
+                <h3>EcoBag Urbana</h3>
+                <p>$18.00</p>
+            </div>
+            <div class="card">
+                <img src="Image/producto3.png" alt="Bolsa EcoBag Estampada">
+                <h3>EcoBag Estampada</h3>
+                <p>$20.00</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Beneficios de BagFree -->
+    <section id="beneficios" class="beneficios py-5">
+        <div class="container text-center">
+            <h2 class="display-4 text-success mb-4">Beneficios de BagFree</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="beneficio-item">
+                        <i class="fas fa-leaf fa-3x text-success"></i>
+                        <h3 class="my-3">Material Ecológico</h3>
+                        <p>Las bolsas BagFree están fabricadas con materiales 100% reciclables, promoviendo la sostenibilidad y reduciendo el impacto ambiental.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="beneficio-item">
+                        <i class="fas fa-shield-alt fa-3x text-success"></i>
+                        <h3 class="my-3">Durabilidad</h3>
+                        <p>Diseñadas para durar más que las bolsas tradicionales, las bolsas BagFree son resistentes, duraderas y perfectas para el uso diario.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="beneficio-item">
+                        <i class="fas fa-paint-brush fa-3x text-success"></i>
+                        <h3 class="my-3">Diseño Innovador</h3>
+                        <p>Con un diseño moderno y funcional, nuestras bolsas no solo son útiles, sino también elegantes, adaptándose a cualquier estilo de vida.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="video" class="py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="display-4 text-success mb-4">Conoce Más Sobre BagFree</h2>
+            <p class="lead">Descubre cómo estamos revolucionando el consumo sostenible.</p>
+            <video controls style="width: 100%; max-width: 800px;">
+                <source src="videos/Conoce a BAGFREE.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de video.
+            </video>
+        </div>
+    </section>
+    
+    
+    
+
+    <!-- Testimonios -->
+    <section id="testimonios" class="testimonios py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="display-4 text-success mb-4">Testimonios</h2>
+            <div id="testimonios-carousel" class="carousel slide" data-bs-ride="carousel">
+                <!-- Indicadores -->
+                <ol class="carousel-indicators">
+                    <li data-bs-target="#testimonios-carousel" data-bs-slide-to="0" class="active"></li>
+                    <li data-bs-target="#testimonios-carousel" data-bs-slide-to="1"></li>
+                    <li data-bs-target="#testimonios-carousel" data-bs-slide-to="2"></li>
+                </ol>
+                <!-- Contenido de los testimonios -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <p class="h5">"¡Me encanta mi bolsa BagFree! Es resistente, ecológica y perfecta para hacer compras. ¡Recomendada!"</p>
+                        <footer class="blockquote-footer">Ana López</footer>
+                    </div>
+                    <div class="carousel-item">
+                        <p class="h5">"La calidad de las bolsas es increíble. Duraderas y con un diseño súper chic. ¡Vale la pena cada centavo!"</p>
+                        <footer class="blockquote-footer">Carlos Martínez</footer>
+                    </div>
+                    <div class="carousel-item">
+                        <p class="h5">"Es genial saber que estoy contribuyendo con el medio ambiente mientras llevo mis productos de manera cómoda. ¡Las adoro!"</p>
+                        <footer class="blockquote-footer">María González</footer>
+                    </div>
+                </div>
+                <!-- Controles del carousel -->
+                <a class="carousel-control-prev text-decoration-none w-auto ps-3" href="#testimonios-carousel" role="button" data-bs-slide="prev">
+                    <i class="fas fa-chevron-left"></i>
+                </a>
+                <a class="carousel-control-next text-decoration-none w-auto pe-3" href="#testimonios-carousel" role="button" data-bs-slide="next">
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Footer -->
+    <footer class="text-center py-4">
+        <p>© 2024 BagFree | "Juntos hacemos el cambio" | <a href="mailto:info@bagfree.com">info@bagfree.com</a></p>
+        <p>¡Síguenos en redes sociales y comparte tu experiencia! Facebook | Instagram | Twitter</p>
+    </footer>
+    
+
+    <script src="scripts.js"></script>
+    <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+    <script>
+        const player = new Plyr('#player');
+    </script>
+</body>
+</html>
